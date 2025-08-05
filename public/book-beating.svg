@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="500"
+   viewBox="0 0 211.66666 132.29167"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:0.407217;stroke:#ffffff;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     d="m 73.616458,70.114586 -0.09124,18.39521 c 0,0 13.860735,-1.696855 21.102418,0.0028 6.413594,1.505299 11.167684,5.621906 11.167684,5.621906 0,0 5.06229,-4.274695 11.50849,-5.820324 7.13062,-1.709733 20.61333,0.03602 20.61333,0.03602 L 137.58335,70.11456 m 0,-7.937501 0.55023,-21.962604 c 0,0 -15.07636,-1.022316 -21.15491,-0.11768 -5.61157,0.835138 -11.16055,5.089789 -11.16055,5.089789 0,0 -6.315338,-3.969389 -11.772118,-4.872459 -5.45678,-0.90307 -20.501981,-1.095604 -20.501984,-0.381761 0,0 0.0088,14.252907 0.03387,22.244671"
+     id="book-outline" />
+  <path
+     style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:0.407217;stroke:#ffffff;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     d="m 26.306895,66.145832 51.748432,0.0039 1.384574,5.24231 2.58094,-13.183734 2.61121,16.125951 1.211503,-8.184527 h 6.637167 l 1.446371,5.287743 2.645833,-13.229167 2.645834,14.552084 1.322921,-6.614584 9.21366,-2e-6 1.36967,5.291696 3.96875,-19.84375 3.96875,29.104167 1.32292,-14.552084 5.37214,-2.9e-5 1.24244,5.291669 2.64583,-13.229167 2.64584,14.552084 1.32292,-6.614584 51.91372,-3e-6"
+     id="beating-line" />
+  <path
+     style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:0.407217;stroke:#ffffff;stroke-width:2.11667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     d="m 105.81812,45.186634 0.0995,16.748845 m -0.0738,8.065608 -0.0485,24.133415"
+     id="book-spine" />
+</svg>
