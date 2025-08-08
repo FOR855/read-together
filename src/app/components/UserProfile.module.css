@@ -1,0 +1,19 @@
+.box {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 5px solid white;
+  border-radius: 50%; /* 圆形关键 */
+  overflow: hidden; /* 裁剪超出的头像 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(206, 206, 206, 0.573);
+}
+
+.linkIcon {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  padding: 10px;
+}
