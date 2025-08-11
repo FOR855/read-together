@@ -3,15 +3,18 @@
   height: 30px;
   border-radius: 20px;
   border: 2px solid slategrey;
+  /* background-color: rgba(186, 255, 252, 0.573); */
   display: flex;
   align-items: center;
   margin: 20px;
-  margin-left: 50px;
+  margin-left: 110px;
+  /* margin-right: 30px; */
   padding: 10px;
 }
 
 .searchInput {
   border: none;
+  background-color: transparent;
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
@@ -31,7 +34,7 @@
 }
 
 .searchButton:hover {
-  background-color: #e3e5e7;
+  background-color: rgba(128, 128, 128, 0.247);
 }
 
 .searchIcon {

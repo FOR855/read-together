@@ -1,5 +1,21 @@
 import "./globals.css";
+import styles from "./page.module.css";
+import Continue from "./components/Continue";
+import Friends from "./components/Friends";
+import Books from "./components/Books";
 
 export default function Page() {
-  return <div></div>;
+  return (
+    <div className={styles.grid}>
+      <div className={styles.block1 + " " + styles.block}>
+        <Continue />
+      </div>
+      <div className={styles.block + " " + styles.block2}>
+        <Friends />
+      </div>
+      <div className={styles.block + " " + styles.block3}>
+        <Books />
+      </div>
+    </div>
+  );
 }

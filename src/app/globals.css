@@ -90,13 +90,17 @@ a {
 }
 
 .mainBox {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #caf4ff;
 }
 
 .topBox {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px;
 }

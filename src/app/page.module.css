@@ -162,3 +162,32 @@ a.secondary {
     filter: invert();
   }
 }
+
+.grid {
+  width: 80vw;
+  height: 100%;
+  display: grid;
+  grid-template: "c f" 1fr "b b" 1fr / 1fr 1fr;
+  gap: 30px;
+  margin: 50px;
+}
+
+.block {
+  width: 100%;
+  background-color: #dbf8ff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+
+.block1 {
+  grid-area: c;
+}
+.block2 {
+  grid-area: f;
+}
+.block3 {
+  grid-area: b;
+}

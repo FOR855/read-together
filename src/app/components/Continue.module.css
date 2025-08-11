@@ -1,0 +1,11 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.itemList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
