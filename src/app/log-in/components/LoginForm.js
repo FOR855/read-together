@@ -46,7 +46,7 @@ function LoginForm() {
       </div>
       <input type="hidden" name="redirectTo" value={callbackUrl} />
       <button className={styles.button} aria-disabled={isPending}>
-        登录/Sign in
+        登录/Log in
       </button>
     </form>
   );
