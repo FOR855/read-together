@@ -5,7 +5,7 @@ import styles from "./UserProfile.module.css";
 function UserProfile() {
   return (
     <div className={styles.box}>
-      <Link href="/user" className={styles.link}>
+      <Link href="/user" title="My Profile" className={styles.link}>
         <img
           src="/icons/yonghu.svg"
           alt="about read-together"

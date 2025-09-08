@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+}
+
+.profile {
+  border-bottom: 2px solid gainsboro;
+}

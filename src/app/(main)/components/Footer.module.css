@@ -1,0 +1,12 @@
+.box {
+  margin: 10px;
+}
+
+.link {
+  margin: 10px;
+  color: slategray;
+}
+
+.link:hover {
+  color: rgba(112, 128, 144, 0.8);
+}

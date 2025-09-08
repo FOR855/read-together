@@ -8,12 +8,28 @@ import { usePathname } from "next/navigation";
 function NavBar() {
   const pathname = usePathname();
   const linkList = [
-    { label: "books", href: "/books", icon: "/icons/shudan.svg" },
-    { label: "firends", href: "/friends", icon: "/icons/wodehaoyou.svg" },
-    { label: "setting", href: "/setting", icon: "/icons/shezhi.svg" },
+    {
+      label: "books",
+      href: "/books",
+      title: "Book Shelf",
+      icon: "/icons/shudan.svg",
+    },
+    {
+      label: "firends",
+      href: "/friends",
+      title: "My Friends",
+      icon: "/icons/wodehaoyou.svg",
+    },
+    {
+      label: "setting",
+      href: "/setting",
+      title: "Settings",
+      icon: "/icons/shezhi.svg",
+    },
     {
       label: "themes",
       href: "/themes",
+      title: "Themes",
       icon: "/icons/zhuti.svg",
     },
   ];
@@ -21,7 +37,7 @@ function NavBar() {
   return (
     <div>
       <nav className={styles.NavBar}>
-        <Link href="/about-us" className={styles.link}>
+        <Link href="/" title="Home" className={styles.link}>
           <img
             src="read-together.svg"
             alt="about read-together"
@@ -34,6 +50,7 @@ function NavBar() {
             <Link
               key={link.label}
               href={link.href}
+              title={link.title}
               className={pathname == link.href ? styles.current : styles.link}
             >
               <img
@@ -44,7 +61,7 @@ function NavBar() {
             </Link>
           ))}
         </div>
-        <Link href="/help" className={styles.link}>
+        <Link href="/help" title="Help" className={styles.link}>
           <img
             src="/icons/bangzhu.svg"
             alt="help"

@@ -170,6 +170,8 @@ a.secondary {
   grid-template: "c f" 1fr "b b" 1fr / 1fr 1fr;
   gap: 30px;
   margin: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .block {
