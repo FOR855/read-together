@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+}
+
+.profile {
+  border-bottom: 2px solid gainsboro;
+}
+
+.profilePicture {
+  width: 200px;
+  height: 200px;
+}

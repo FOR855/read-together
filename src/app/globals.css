@@ -46,7 +46,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #fcf7bc; /* 可选：深色背景更像心电图效果 */
+  /* background: #fcf7bc;  */
 }
 
 .ecg-line {
@@ -90,11 +90,12 @@ a {
 }
 
 .mainBox {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #caf4ff;
 }
 
