@@ -3,12 +3,12 @@
 import React from "react";
 import styles from "../page.module.css";
 import { useActionState } from "react";
-import authenticate from "@/app/lib/authenticate";
+import { authenticate } from "@/app/lib/actions";
 import { useSearchParams } from "next/navigation";
 
 function LoginForm() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
   const [errorMessage, formAction, isPending] = useActionState(
     authenticate,
     undefined
