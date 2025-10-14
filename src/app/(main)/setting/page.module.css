@@ -1,12 +1,12 @@
-button {
+.button {
   width: 120px;
   height: 50px;
   margin: 12px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(255, 255, 225);
+  background-color: rgb(255, 134, 74);
   /* background-color: rgb(254, 254, 217); */
-  color: rgb(213, 157, 40);
+  color: rgb(255, 245, 238);
   font-weight: bold;
   font-size: 15px;
 }
