@@ -4,9 +4,16 @@
   margin: 12px;
   border-radius: 5px;
   border: none;
-  background-color: rgb(255, 134, 74);
+  background-color: rgb(255, 94, 0);
   /* background-color: rgb(254, 254, 217); */
-  color: rgb(255, 245, 238);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 15px;
+}
+.button:hover {
+  border: 3px solid #5757577f;
+}
+
+.button:focus {
+  background-color: rgb(255, 125, 85);
 }
