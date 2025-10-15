@@ -2,12 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { supabase } from "../utils/supabaseClient";
 import Draggable from "react-draggable";
 
 export default function BookPage() {
   const { book_id } = useParams();
-  const supabase = createClientComponentClient();
 
   const [notes, setNotes] = useState([]);
   const [addingNote, setAddingNote] = useState(false);
