@@ -9,10 +9,6 @@
   background-color: azure;
 }
 
-/* .profile {
-  border-bottom: 2px solid gainsboro;
-} */
-
 .profilePicture {
   width: 150px;
   height: 150px;
@@ -37,21 +33,9 @@
   border-bottom: 1px solid gainsboro;
   word-break: break-all;
 }
-
-.infoList {
+.bookHead {
   width: 500px;
-  margin: 10px;
-  display: flex;
-  align-items: center;
-}
-.infoItem {
-  width: 320px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-right: 1px solid gainsboro;
-}
-.info {
-  width: 600px;
-  padding: 10px;
-  text-align: right;
+  margin: 20px;
+  padding-left: 20px;
+  font-weight: bold;
 }
