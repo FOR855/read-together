@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "../page.module.css";
-import AFriend from "./AFriend";
+import { auth } from "@/auth.js";
+import postgres from "postgres";
+import Link from "next/link";
+import Friend from "./Friend";
+
+const sql = postgres(process.env.POSTGRES_URL, { ssl: "require" });
 
 async function List() {
   const session = await auth();
@@ -30,7 +35,11 @@ WHERE ${user.id} IN (friends.user_id_1, friends.user_id_2)
   return (
     <div className={styles.friendsList}>
       <div className={styles.header}>My Friends</div>
-      <AFriend />
+      {friendsList.map((Fr) => (
+        <div key={Fr.id}>
+          <Friend Fr={Fr} />
+        </div>
+      ))}
     </div>
   );
 }
