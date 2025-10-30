@@ -43,24 +43,28 @@ export const { auth, signIn, signOut } = NextAuth({
       },
     }),
   ],
+
   callbacks: {
-    // You can spread or override callbacks from authConfig, but ensure jwt/session here
+    // 🔹 1. 当 JWT 被创建或更新时触发
     async jwt({ token, user }) {
       if (user) {
+        // 登录时可在这里添加自定义字段
         token.id = user.id;
+        token.name = user.name; // 假设数据库中有 role
         token.email = user.email;
-        token.name = user.name;
       }
       return token;
     },
+
+    // 🔹 2. 每次 session 被调用时触发（客户端可访问的 session 对象）
     async session({ session, token }) {
-      if (session.user) {
+      // 将 token 中的字段注入到 session
+      if (token) {
         session.user.id = token.id;
-        session.user.email = token.email;
         session.user.name = token.name;
+        session.user.email = token.email;
       }
       return session;
-    }, // If you still want authorized logic, you can pull it in or override
-    authorized: authConfig.callbacks.authorized,
+    },
   },
 });
