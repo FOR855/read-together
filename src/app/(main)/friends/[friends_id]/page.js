@@ -1,7 +1,6 @@
 import "@/app/globals.css";
 import styles from "../page.module.css";
 
-import { auth } from "@/auth.js";
 import postgres from "postgres";
 
 const sql = postgres(process.env.POSTGRES_URL, { ssl: "require" });

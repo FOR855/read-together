@@ -17,20 +17,20 @@ const sql = postgres(process.env.POSTGRES_URL, { ssl: "require" });
 export default async function ProfilePage() {
   // const session = await getServerSession(authConfig);
   const session = await auth();
-  if (!session || !session.user.email) {
+  if (!session || !session.user.id) {
     // Not signed in — redirect or show login link
     return <p>You must sign in to view profile.</p>;
   }
 
   // session.user.email should be populated if you forwarded it via callbacks
-  const email = session.user.email;
-  console.log("Fetching profile for email:", email);
+  const id = session.user.id;
+  console.log("Fetching profile for id:", id);
 
   // const { userData, error } = await supabase
   //   .from("users")
   //   .select("*")
   //   .eq("user_id", user_id);
-  const userList = await sql`SELECT * FROM users WHERE email=${email}`;
+  const userList = await sql`SELECT * FROM users WHERE id=${id}`;
   const user = userList[0];
 
   const created_at = new Date(user.created_at);
