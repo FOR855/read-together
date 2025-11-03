@@ -11,6 +11,7 @@ import styles from "./page.module.css";
 // import { authConfig } from "@/auth.config";
 import { auth } from "@/auth.js";
 import postgres from "postgres";
+import Link from "next/link";
 
 const sql = postgres(process.env.POSTGRES_URL, { ssl: "require" });
 
@@ -64,7 +65,9 @@ export default async function ProfilePage() {
           <div className={styles.info}>{time}</div>
         </div>
         {/* ))} */}
-
+        <Link href={"/user/edit"} className={styles.edit}>
+          编辑/Edit
+        </Link>
         {/* <Information /> */}
       </div>
     </div>

@@ -55,27 +55,3 @@
   padding: 10px;
   text-align: right;
 }
-
-.edit {
-  width: 120px;
-  height: 45px;
-  /* margin: 12px; */
-  margin-top: 45px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgb(255, 255, 233);
-  /* background-color: rgb(254, 254, 217); */
-  color: rgb(213, 157, 40);
-  font-weight: bold;
-  font-size: 15px;
-  text-align: center;
-}
-
-.edit:hover {
-  border: 2px solid #c0bfad7f;
-}
-
-.edit:focus {
-  background-color: #ffffd8ce;
-}
