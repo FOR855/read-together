@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "../page.module.css";
 import { useActionState } from "react";
 import { authenticate } from "@/app/lib/actions";
@@ -19,6 +19,12 @@ function LoginForm() {
   const handleSignUp = () => {
     router.push("/sign-up");
   };
+
+  useEffect(() => {
+      if (errorMessage) {
+        alert(errorMessage); // 简单弹窗提示
+      }
+    }, [errorMessage]);
   // 2025/11/05 yanghuoshan
 
   return (
