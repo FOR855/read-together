@@ -181,7 +181,7 @@ a.secondary {
   display: flex;
   align-items: center;
   justify-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .block1 {
@@ -192,4 +192,20 @@ a.secondary {
 }
 .block3 {
   grid-area: b;
+}
+
+.blockHead {
+  font-size: larger;
+  font-weight: bold;
+  padding: 10px;
+}
+.friendsPicture {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 2px solid azure;
+}
+.friendsPicture:hover {
+  box-shadow: 0 0 5px 3px azure;
 }

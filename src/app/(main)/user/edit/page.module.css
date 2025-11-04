@@ -16,8 +16,9 @@
 .profilePicture {
   width: 150px;
   height: 150px;
-  margin: 10px;
-  margin-top: 50px;
+  /* margin: 10px; */
+  margin: 40px;
+  margin-bottom: 50px;
   border-radius: 50%;
 }
 
@@ -40,7 +41,7 @@
 
 .infoList {
   width: 500px;
-  margin: 10px;
+  margin: 20px;
   display: flex;
   align-items: center;
 }
@@ -55,27 +56,57 @@
   padding: 10px;
   text-align: right;
 }
+.upload {
+  width: 160px;
+  height: 40px;
+  /* margin: 12px; */
+  margin: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #9e9d8d7f;
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(254, 254, 217); */
+  color: rgb(78, 58, 16);
+  /* font-weight: bold; */
+  /* font-size: 12px; */
+  text-align: center;
+}
 
+.upload:hover {
+  border: 2px solid #dedbad7f;
+}
+
+.upload:focus {
+  background-color: #ffffd8ce;
+}
 .edit {
-  width: 120px;
+  width: 200px;
   height: 45px;
   /* margin: 12px; */
-  margin-top: 45px;
+  margin-top: 65px;
   padding: 10px;
   border-radius: 5px;
-  border: none;
-  background-color: rgb(255, 255, 233);
+  border: 2px solid #c0bfad7f;
+  background-color: rgb(255, 255, 245);
   /* background-color: rgb(254, 254, 217); */
-  color: rgb(213, 157, 40);
+  color: rgb(189, 141, 37);
   font-weight: bold;
   font-size: 15px;
   text-align: center;
 }
 
 .edit:hover {
-  border: 2px solid #c0bfad7f;
+  border: 2px solid #dedbad7f;
 }
 
 .edit:focus {
   background-color: #ffffd8ce;
+}
+/* 
+input[type="file"]::file-selector-button {
+  content: "Upload Avatar";
+} */
+
+.file {
+  display: none;
 }

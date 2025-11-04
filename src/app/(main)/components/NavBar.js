@@ -51,7 +51,9 @@ function NavBar() {
               key={link.label}
               href={link.href}
               title={link.title}
-              className={pathname == link.href ? styles.current : styles.link}
+              className={
+                pathname.startsWith(link.href) ? styles.current : styles.link
+              }
             >
               <img
                 src={link.icon}

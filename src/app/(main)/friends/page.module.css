@@ -1,0 +1,101 @@
+.mainBox {
+  display: flex;
+}
+
+.friendsList {
+  width: 600px;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.list {
+  width: 600px;
+  height: 90vh;
+  /* margin-top: 12px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: azure;
+}
+.header {
+  width: 580px;
+  padding: 40px;
+  font-size: x-large;
+}
+.friend {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+.friend:hover {
+  box-shadow: 0 0 5px 3px rgb(218, 237, 255);
+}
+
+.current {
+  background-color: rgb(231, 251, 255);
+}
+.friendPicture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.friendInformation {
+  width: 400px;
+}
+
+.nameAndStatus {
+  display: flex;
+  align-items: center;
+  font-size: larger;
+}
+
+.friendName {
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.friendBio {
+  padding: 10px;
+}
+.profilePage {
+  width: 600px;
+  height: 90vh;
+}
+.profilePicture {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  margin-top: 50px;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 10px;
+  text-align: center;
+  color: #000;
+}
+
+.bio {
+  width: 500px;
+  height: max-content;
+  margin: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 20px;
+  border-bottom: 1px solid gainsboro;
+  word-break: break-all;
+}
+.bookHead {
+  width: 500px;
+  margin: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+}
