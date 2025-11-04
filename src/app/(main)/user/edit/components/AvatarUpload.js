@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 export default function AvatarUpload({ currentUrl, onUploaded }) {
   const { data: session } = useSession();
   const [file, setFile] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
