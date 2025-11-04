@@ -1,0 +1,113 @@
+.content {
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(249, 255, 248);
+}
+
+.logoBox {
+  /* width: 100px;
+  height: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 225);
+  padding: 0px;
+  box-shadow: 0 0 5px 5px rgb(254, 254, 217);
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 21px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  color: rgb(160, 106, 62);
+}
+
+.inputBox {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #7e7e7ec7;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  /* padding: 5px; */
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  margin-right: 0px;
+  padding-right: 5px;
+  border-right: 1px solid gainsboro;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  /* height: 100%; */
+  color: darkslategray;
+}
+
+.input:focus {
+  outline: none;
+  background-color: rgba(224, 232, 239, 0.5);
+  /* background-color: darkgrey; */
+  border-radius: 5px;
+}
+
+.input::placeholder {
+  color: darkgray;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: inherit;
+} /*处理浏览器自动填充改变样式但是没什么用*/
+
+.button {
+  width: 120px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 255, 225);
+  /* background-color: rgb(254, 254, 217); */
+  color: rgb(213, 157, 40);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.button:hover {
+  border: 2px solid #7e7e7e7f;
+}
+
+.button:focus {
+  background-color: rgba(252, 248, 192, 0.808);
+}
