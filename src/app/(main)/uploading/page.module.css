@@ -1,0 +1,89 @@
+.list {
+  width: 600px;
+  height: 90vh;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: azure;
+}
+
+.bookCover {
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+}
+.upload {
+  width: 260px;
+  height: 40px;
+  /* margin: 12px; */
+  margin: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #9e9d8d7f;
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(254, 254, 217); */
+  color: rgb(78, 58, 16);
+  /* font-weight: bold; */
+  /* font-size: 12px; */
+  text-align: center;
+}
+
+.upload:hover {
+  border: 2px solid #dedbad7f;
+}
+
+.upload:focus {
+  background-color: #ffffd8ce;
+}
+
+.infoList {
+  width: 500px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+.infoItem {
+  width: 320px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid gainsboro;
+}
+.info {
+  width: 600px;
+  padding: 10px;
+  text-align: right;
+}
+.edit {
+  width: 200px;
+  height: 45px;
+  margin: 20px;
+  /* margin-top: 35px; */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #c0bfad7f;
+  background-color: rgb(255, 255, 245);
+  /* background-color: rgb(254, 254, 217); */
+  color: rgb(189, 141, 37);
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.edit:hover {
+  border: 2px solid #dedbad7f;
+}
+
+.edit:focus {
+  background-color: #ffffd8ce;
+}
+/* 
+input[type="file"]::file-selector-button {
+  content: "Upload Avatar";
+} */
+
+.file {
+  display: none;
+}

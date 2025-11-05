@@ -20,6 +20,7 @@ export async function POST(request) {
 
   const formData = await request.formData();
   const name = formData.get("name");
+  const bio = formData.get("bio");
   const avatarFile = formData.get("avatar");
 
   let profile_picture_url = null;
@@ -39,12 +40,13 @@ export async function POST(request) {
     UPDATE users
     SET
       name = ${typeof name === "string" ? name : sql`name`},
+      bio = ${typeof bio === "string" ? bio : sql`bio`},
       profile_picture_url = ${profile_picture_url ?? sql`profile_picture_url`}
     WHERE id = ${userId}
   `;
 
   const updated = await sql`
-    SELECT id, email, name, profile_picture_url
+    SELECT id, email, name, bio, profile_picture_url
     FROM users
     WHERE id = ${userId}
   `;

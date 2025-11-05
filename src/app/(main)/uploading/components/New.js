@@ -1,13 +1,18 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import styles from "../page.module.css";
 
-export default function EditForm({ session, user }) {
-  const [name, setName] = useState(user.name);
+export default function New({ user }) {
+  const router = useRouter();
+  const [title, setTitle] = useState("Input tile...");
+  const [author, setAuthor] = useState("Input author...");
+
+  const [discription, setDiscription] = useState("No discription");
   const [file, setFile] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(user.profile_picture_url);
-  const [bio, setBio] = useState(user.bio);
+  // const [previewUrl, setPreviewUrl] = useState(user.profile_picture_url);
+  // const [bio, setBio] = useState(user.bio);
 
   const [loading, setLoading] = useState(false);
 
@@ -23,8 +28,9 @@ export default function EditForm({ session, user }) {
     const selected = e.target.files?.[0];
     if (selected) {
       setFile(selected);
-      const objectUrl = URL.createObjectURL(selected);
-      setPreviewUrl(objectUrl);
+      setTitle(selected.name);
+      // const objectUrl = URL.createObjectURL(selected);
+      // setPreviewUrl(objectUrl);
       // Optionally revoke later: URL.revokeObjectURL(objectUrl)
     }
   };
@@ -33,13 +39,12 @@ export default function EditForm({ session, user }) {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData();
-    formData.append("name", name);
-    formData.append("bio", bio);
+    formData.append("title", title);
     if (file) {
-      formData.append("avatar", file);
+      formData.append("book", file);
     }
 
-    const res = await fetch("/api/profile/update", {
+    const res = await fetch("/api/books/upload", {
       method: "POST",
       body: formData,
     });
@@ -47,10 +52,12 @@ export default function EditForm({ session, user }) {
     setLoading(false);
 
     if (!res.ok) {
-      alert("Update failed: " + (json.error || "Unknown error"));
+      alert("Upload failed: " + (json.error || "Unknown error"));
     } else {
       // e.g., call session.update({ user: { ... } }) or refresh UI
-      alert("Profile updated!");
+      alert("Book Uploaded!");
+
+      router.push(`/books/${json.book.book_id}`);
       // const { email, name, profile_picture_url } = user;
     }
   };
@@ -59,37 +66,53 @@ export default function EditForm({ session, user }) {
     <form onSubmit={handleSubmit} encType="multipart/form-data">
       <div className={styles.list}>
         <img
-          src={previewUrl}
-          alt="User profile picture"
-          className={styles.profilePicture}
+          src="/icons/shu.svg"
+          alt="book cover"
+          className={styles.bookCover}
         />
+        {/* <Image /> */}
         <button
           type="button"
           onClick={() => fileInputRef.current.click()}
           className={styles.upload}
         >
-          上传图片/Upload Avatar
+          上传文件/Upload a new book
         </button>
         <input
           id="file"
           className={styles.file}
           type="file"
           ref={fileInputRef}
-          accept="image/*"
+          accept=".pdf,.epub"
           // style={{ display: "none" }}
           onChange={handleFileChange}
         />
+        <div className={styles.infoList}>
+          <div className={styles.infoItem}>标题/title</div>
+          <input value={title} onChange={(e) => setTitle(e.target.value)} />
+        </div>
+        <div className={styles.infoList}>
+          <div className={styles.infoItem}>作者/author</div>
+          <input value={author} onChange={(e) => setAuthor(e.target.value)} />
+        </div>
+        <div className={styles.infoList}>
+          <div className={styles.infoItem}>描述/discription</div>
+          <input
+            value={discription}
+            onChange={(e) => setDiscription(e.target.value)}
+          />
+        </div>
         {/* </div> */}
         {/* <div className={styles.name}>{user.name}</div> */}
         {/* <div className={styles.list}> */}
-        <div className={styles.infoList}>
+        {/* <div className={styles.infoList}>
           <div className={styles.infoItem}>昵称/name</div>
           <input value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className={styles.infoList}>
           <div className={styles.infoItem}>简介/bio</div>
           <input value={bio} onChange={(e) => setBio(e.target.value)} />
-        </div>
+        </div> */}
         {/* </div> */}
         {/* <div>
         <label>Name</label>
