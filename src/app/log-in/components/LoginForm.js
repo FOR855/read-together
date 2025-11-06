@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import styles from "../page.module.css";
 import { useActionState } from "react";
 import { authenticate } from "@/app/lib/actions";
@@ -21,10 +21,10 @@ function LoginForm() {
   };
 
   useEffect(() => {
-      if (errorMessage) {
-        alert(errorMessage); // 简单弹窗提示
-      }
-    }, [errorMessage]);
+    if (errorMessage) {
+      alert(errorMessage); // 简单弹窗提示
+    }
+  }, [errorMessage]);
   // 2025/11/05 yanghuoshan
 
   return (
@@ -67,7 +67,7 @@ function LoginForm() {
         onClick={handleSignUp}
         aria-disabled={isPending}
       >
-        注册/Sign out
+        注册/Sign up
       </button>
     </form>
   );
