@@ -6,6 +6,7 @@ import { supabase } from "@/app/lib/database/supabaseClient";
 import Draggable from "react-draggable";
 import styles from "../page.module.css";
 import { useRef } from "react";
+import ReadingPage from "./ReadingPage";
 
 export default function BookPage({ user_id }) {
   const nodeRef = useRef(null);
@@ -55,9 +56,12 @@ export default function BookPage({ user_id }) {
         // }
         handleRealtimeChange
       )
-      .subscribe();
+      .subscribe((status) => {
+        console.log("Subscription status:", status);
+      });
 
     function handleRealtimeChange(payload) {
+      console.log("Realtime payload", payload);
       if (payload.eventType === "INSERT") {
         setNotes((prev) => [...prev, payload.new]);
       } else if (payload.eventType === "UPDATE") {
@@ -121,7 +125,8 @@ export default function BookPage({ user_id }) {
     <div className="relative w-full h-screen border" onClick={handleAddSticky}>
       {/* Book content placeholder */}
       <div id="book-viewer" className="w-full h-full bg-gray-100">
-        Book goes here (PDF/EPUB)
+        {/* Book goes here (PDF/EPUB) */}
+        <ReadingPage params={book_id} />
       </div>
 
       {/* Overlay */}
